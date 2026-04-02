@@ -36,8 +36,8 @@ python h4rv3st3r.py -c -d 1 -o scan
 --delay : Seconds between requests
 
 --format csv : CSV output
-
-
+```
+```
 ## Scoring System
 
 URLs are analyzed without opening them. Score factors:
