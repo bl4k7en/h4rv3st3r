@@ -36,3 +36,20 @@ python h4rv3st3r.py -c -d 1 -o scan
 --delay : Seconds between requests
 
 --format csv : CSV output
+
+
+## Scoring System
+
+URLs are analyzed without opening them. Score factors:
+
+| Factor | Score | Example |
+|--------|-------|---------|
+| File hoster detected | +30 | mega.nz, dropbox.com, rapidgator.net |
+| Suspicious path pattern | +20 | /file/abc123, /d/xyz789 |
+| Suspicious parameter | +15 | ?key=, ?pwd=, ?token=, ?dl= |
+| Long cryptic segment | +15 | /7XfK2p9Qx4m1n5b2v8c3l6k9j0 |
+| Suspicious TLD | +10 | .xyz, .top, .club, .click |
+| Multiple subdomains | +5 | dl-123.cdn.mega.nz |
+
+**Threshold:** Score ≥ 30 → flagged as suspicious
+**Recommendation:** Score ≥ 50 → highly suspicious, manual review recommended
