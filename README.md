@@ -41,7 +41,6 @@ python h4rv3st3r.py -c -d 1 -o scan
 Scoring System
 URLs are analyzed without opening them. Score factors:
 
-Factor	Score	Example
 File hoster detected	+30	mega.nz, dropbox.com, rapidgator.net
 Suspicious path pattern	+20	/file/abc123, /d/xyz789
 Suspicious parameter	+15	?key=, ?pwd=, ?token=, ?dl=
